@@ -79,7 +79,7 @@ ip address 170.50.192.242 255.255.255.240
 no shutdown
 
 interface e0/2
-ip address 170.50.192.195 255.255.255.192
+ip address 170.50.192.193 255.255.255.192
 no shutdown
 end
 wr

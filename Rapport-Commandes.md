@@ -35,7 +35,7 @@ Les adresses des postes de travail dans tous les bâtiments seront attribuées d
 configure terminal
 
 interface e0/0
-ip address 170.50.192.1 255.255.255.128
+ip address 170.50.192.126 255.255.255.128
 no shutdown
 
 interface e0/1

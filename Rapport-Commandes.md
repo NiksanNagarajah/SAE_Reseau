@@ -8,9 +8,15 @@ De ce fait, on va diviser le réseau en deux sous-réseaux, un pour le bâtiment
 
 Pour le bâtiment Production, on peut utiliser un masque de sous-réseau de 25 bits, ce qui donne un masque de sous-réseau de 170.50.192.0/25. Cela nous donne 128 adresses, dont 126 utilisables. Ainsi, ce sous-réseau peut accueillir les 110 postes de travail.
 
-Pour les deux autres bâtiments, on vas diviser en deux le sous-réseau restant, soit le sous-réseau suivant : 170.50.192.128/25. On peut utiliser un masque de sous-réseau de 26 bits, ce qui donne un masque de sous-réseau de 170.50.192.128/26 pour le batiment Finances et un masque de sous-réseau de 170.50.192.128/26 pour le bâtiment R&D. Cela nous donne 64 adresses, dont 62 utilisables, pour chaque sous-réseau. 
+Pour les deux autres bâtiments, on vas diviser en deux le sous-réseau restant, soit le sous-réseau suivant : 170.50.192.128/25. On peut utiliser un masque de sous-réseau de 26 bits, ce qui donne un masque de sous-réseau de 170.50.192.128/26 pour le batiment Finances et un masque de sous-réseau de 170.50.192.192/26 pour le bâtiment R&D. Cela nous donne 64 adresses, dont 62 utilisables, pour chaque sous-réseau. 
 
+Néanmoins, on a besoin de 3 adresses pour les routeurs. On va donc utiliser un masque de sous-réseau de 27 bits, ce qui donne un masque de sous-réseau de 170.50.192.192/27 pour le bâtiment R&D. 
 
+Pour les liaisons entre les routeurs, on va donc diviser le sous-réseau restant en trois, soit le sous-réseau suivant : 170.50.192.224/27. Ainsi, les adresses des liaisons entre les routeurs seront les suivantes :
+
+R1-R2 : 170.50.192.224/29
+R1-R3 : 170.50.192.232/29
+R2-R3 : 170.50.192.240/29
 
 
 

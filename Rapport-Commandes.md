@@ -1,3 +1,7 @@
+Nagarajah Nkisan
+
+Wiciak Alexy
+
 # SAE Réseau
 
 ## Calcul des sous-réseaux
@@ -32,6 +36,7 @@ Les adresses des postes de travail dans tous les bâtiments seront attribuées d
 
 #### Commandes de R1
 
+```
 configure terminal
 
 interface e0/0
@@ -53,10 +58,71 @@ ip route 170.50.192.128 255.255.255.192 170.50.192.230
 ip route 170.50.192.192 255.255.255.224 170.50.192.238
 end
 wr
+```
 
+###### Configuration du serveur DHCP
+
+```
+conf term
+service dhcp
+ip dhcp pool production
+network 170.50.192.0 255.255.255.128
+lease 1
+default-router 170.50.192.126
+end
+wr
+
+conf term
+ip dhcp excluded-address 170.50.192.1 170.50.192.10
+end
+wr
+
+conf term
+service dhcp
+ip dhcp pool finances
+network 170.50.192.128 255.255.255.192
+lease 1
+default-router 170.50.192.229
+end
+wr
+
+conf term
+ip dhcp excluded-address 170.50.192.129 170.50.192.139
+end
+wr
+
+conf term
+service dhcp
+ip dhcp pool r&d
+network 170.50.192.192 255.255.255.224
+lease 1
+default-router 170.50.192.237
+end
+wr
+
+conf term
+ip dhcp excluded-address 170.50.192.193 170.50.192.203
+end
+wr
+```
+
+###### Configuration du routage dynamique DHCP
+
+```
+configure terminal
+router rip
+version 2
+no auto-summary
+network 170.50.192.0
+network 170.50.192.224
+network 170.50.192.232
+end
+wr
+```
 
 #### Commandes de R2
 
+```
 configure terminal
 
 interface e0/0
@@ -78,9 +144,35 @@ ip route 170.50.192.0 255.255.255.128 170.50.192.229
 ip route 170.50.192.192 255.255.255.224 170.50.192.246
 end
 wr
+```
+
+###### Configuration du relai DHCP
+
+```
+configure terminal
+interface e0/0
+ip helper-address 170.50.192.229
+end
+wr
+```
+
+###### Configuration du routage dynamique DHCP
+
+```
+configure terminal
+router rip
+version 2
+no auto-summary
+network 170.50.192.128
+network 170.50.192.224
+network 170.50.192.240
+end
+wr
+```
 
 #### Commandes de R3
 
+```
 configure terminal
 
 interface e0/0
@@ -102,21 +194,77 @@ ip route 170.50.192.0 255.255.255.128 170.50.192.237
 ip route 170.50.192.128 255.255.255.192 170.50.192.245
 end
 wr
+```
 
+###### Configuration du relai DHCP
+
+```
+configure terminal
+interface e0/2
+ip helper-address 170.50.192.237
+end
+wr
+```
+
+###### Configuration du routage dynamique DHCP
+
+```
+configure terminal
+router rip
+version 2
+no auto-summary
+network 170.50.192.192
+network 170.50.192.240
+network 170.50.192.232
+end
+wr
+```
+
+#### Commandes de R4
+
+```
+configure terminal
+interface e0/0
+ip address 10.0.0.1 255.255.255.0
+no shutdown
+end
+
+configure terminal
+interface e0/1
+ip address 170.50.192.125 255.255.255.128
+no shutdown
+end
+
+configure terminal
+router rip
+version 2
+no auto-summary
+network 10.0.0.0
+network 170.50.192.0
+end
+```
 
 ### Configuration des PC
 
 #### Commande de PC1
 
+```
 ip 170.50.192.1/25 170.50.192.126
 save
+```
 
 #### Commande de PC2
 
+```
 ip 170.50.192.129/26 170.50.192.190
 save
+```
 
 #### Commande de PC3
- 
+
+ ```
 ip 170.50.192.193/27 170.50.192.222
 save
+```
+
+

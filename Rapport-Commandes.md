@@ -30,7 +30,7 @@ Les adresses des postes de travail dans tous les bâtiments seront attribuées d
 
 ### Configuration des routeurs
 
-#### Commande de R1
+#### Commandes de R1
 
 configure terminal
 
@@ -48,7 +48,14 @@ no shutdown
 end
 wr
 
-#### Commande de R2
+conf term
+ip route 170.50.192.128 255.255.255.192 170.50.192.230
+ip route 170.50.192.192 255.255.255.224 170.50.192.238
+end
+wr
+
+
+#### Commandes de R2
 
 configure terminal
 
@@ -66,7 +73,13 @@ no shudown
 end
 wr
 
-#### Commande de R3
+conf term
+ip route 170.50.192.0 255.255.255.128 170.50.192.229
+ip route 170.50.192.192 255.255.255.224 170.50.192.246
+end
+wr
+
+#### Commandes de R3
 
 configure terminal
 
@@ -81,6 +94,12 @@ no shutdown
 interface e0/2
 ip address 170.50.192.222 255.255.255.224
 no shutdown
+end
+wr
+
+conf term
+ip route 170.50.192.0 255.255.255.128 170.50.192.237
+ip route 170.50.192.128 255.255.255.192 170.50.192.245
 end
 wr
 

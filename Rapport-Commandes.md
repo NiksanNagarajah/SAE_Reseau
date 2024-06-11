@@ -23,6 +23,16 @@ Les adresses des postes de travail dans tous les bâtiments seront attribuées d
 
 ## Annexe
 
-### Commande de PC1
+### Configuration des routeurs
+
+#### Commande de R1
+
+
+
+### Configuration des PC
+
+#### Commande de PC1
+
+ip 170.50.192.5
 
 ... 

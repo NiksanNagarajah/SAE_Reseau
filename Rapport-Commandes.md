@@ -11,13 +11,6 @@ Pour le bâtiment Production, on peut utiliser un masque de sous-réseau de 25 b
 Pour les deux autres bâtiments, on vas diviser en deux le sous-réseau restant, soit le sous-réseau suivant : 170.50.192.128/25. On peut utiliser un masque de sous-réseau de 26 bits, ce qui donne un masque de sous-réseau de 170.50.192.128/26 pour le batiment Finances et un masque de sous-réseau de 170.50.192.128/26 pour le bâtiment R&D. Cela nous donne 64 adresses, dont 62 utilisables, pour chaque sous-réseau. 
 
 
-
-
-
-
-
-
-
 Les adresses des postes de travail dans tous les bâtiments seront attribuées dynamiquement. Un seul serveur DHCP sera utilisé, avec des relais DHCP dans chaque sous-réseau. De plus, les dix premières adresses de chaque sous-réseau seront réservées pour l’installation de serveurs avec des adresses statiques.
 
 
@@ -26,6 +19,58 @@ Les adresses des postes de travail dans tous les bâtiments seront attribuées d
 ### Configuration des routeurs
 
 #### Commande de R1
+
+configure terminal
+
+interface e0/0
+ip address 170.50.192.1 255.255.255.128
+no shutdown
+
+interface e0/1
+ip address 170.50.192.193 255.255.255.240
+no shutdown
+
+interface e0/2
+ip address 170.50.192.225 255.255.255.240
+no shutdown
+end
+wr
+
+#### Commande de R2
+
+configure terminal
+
+interface e0/0
+ip address 170.50.192.129 255.255.255.192
+no shutdown
+
+interface e0/1
+ip address 170.50.192.194 255.255.255.240
+no shutdown
+
+interface e0/2
+ip address 170.50.192.241 255.255.255.240
+no shudown
+end
+wr
+
+#### Commande de R3
+
+configure terminal
+
+interface e0/0
+ip address 170.50.192.226 255.255.255.240
+no shutdown
+
+interface e0/1
+ip address 170.50.192.242 255.255.255.240
+no shutdown
+
+interface e0/2
+ip address 170.50.192.195 255.255.255.192
+no shutdown
+end
+wr
 
 
 

@@ -35,15 +35,15 @@ Les adresses des postes de travail dans tous les bâtiments seront attribuées d
 configure terminal
 
 interface e0/0
-ip address 170.50.192.1 255.255.255.128
+ip address 170.50.192.126 255.255.255.128
 no shutdown
 
 interface e0/1
-ip address 170.50.192.193 255.255.255.240
+ip address 170.50.192.229 255.255.255.248
 no shutdown
 
 interface e0/2
-ip address 170.50.192.225 255.255.255.240
+ip address 170.50.192.237 255.255.255.248
 no shutdown
 end
 wr
@@ -53,15 +53,15 @@ wr
 configure terminal
 
 interface e0/0
-ip address 170.50.192.129 255.255.255.192
+ip address 170.50.192.190 255.255.255.192
 no shutdown
 
 interface e0/1
-ip address 170.50.192.194 255.255.255.240
+ip address 170.50.192.230 255.255.255.248
 no shutdown
 
 interface e0/2
-ip address 170.50.192.241 255.255.255.240
+ip address 170.50.192.245 255.255.255.248
 no shudown
 end
 wr
@@ -71,25 +71,33 @@ wr
 configure terminal
 
 interface e0/0
-ip address 170.50.192.226 255.255.255.240
+ip address 170.50.192.238 255.255.255.248
 no shutdown
 
 interface e0/1
-ip address 170.50.192.242 255.255.255.240
+ip address 170.50.192.246 255.255.255.248
 no shutdown
 
 interface e0/2
-ip address 170.50.192.193 255.255.255.192
+ip address 170.50.192.222 255.255.255.224
 no shutdown
 end
 wr
-
 
 
 ### Configuration des PC
 
 #### Commande de PC1
 
-ip 170.50.192.5
+ip 170.50.192.1 170.50.192.126
+save
 
-... 
+#### Commande de PC2
+
+ip 170.50.192.129 170.50.192.190
+save
+
+#### Commande de PC3
+ 
+ip 170.50.192.193 170.50.192.222
+save

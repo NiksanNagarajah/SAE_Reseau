@@ -135,7 +135,7 @@ no shutdown
 
 interface e0/2
 ip address 170.50.192.245 255.255.255.248
-no shudown
+no shutdown
 end
 wr
 

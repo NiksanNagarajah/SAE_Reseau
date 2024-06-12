@@ -22,8 +22,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"199\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">Adresse : 170.50.192.0/24</text></svg>",
-                "x": -520,
-                "y": -272,
+                "x": -496,
+                "y": -311,
                 "z": 2
             },
             {
@@ -49,8 +49,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"224\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">Finances : 170.50.192.128/26</text></svg>",
-                "x": -7,
-                "y": -168,
+                "x": -166,
+                "y": -349,
                 "z": 2
             },
             {
@@ -193,8 +193,8 @@
                 "locked": false,
                 "rotation": 0,
                 "svg": "<svg width=\"138\" height=\"25\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">DMZ : 10.0.0.0/24</text></svg>",
-                "x": -641,
-                "y": -106,
+                "x": -639,
+                "y": -232,
                 "z": 2
             },
             {
@@ -214,6 +214,42 @@
                 "x": -477,
                 "y": -2,
                 "z": 2
+            },
+            {
+                "drawing_id": "fc9db3cd-721f-4b5a-bdf8-5f4c754d481c",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"544\" height=\"143\"><rect width=\"544\" height=\"143\" fill=\"#99c1f1\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#62a0ea\" /></svg>",
+                "x": -715,
+                "y": 67,
+                "z": 0
+            },
+            {
+                "drawing_id": "62f87880-db39-4fe5-b085-78647c8f5fff",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"544\" height=\"143\"><rect width=\"544\" height=\"143\" fill=\"#8ff0a4\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#57e389\" /></svg>",
+                "x": 19,
+                "y": 63,
+                "z": 0
+            },
+            {
+                "drawing_id": "b09ee320-8697-49a1-91b1-dcacd3f40ad6",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"233\" height=\"367\"><rect width=\"233\" height=\"367\" fill=\"#ffbe6f\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#ffa348\" /></svg>",
+                "x": -172,
+                "y": -362,
+                "z": 0
+            },
+            {
+                "drawing_id": "3c48f08c-299b-4f5f-b30a-52827e128f2d",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"308\" height=\"277\"><rect width=\"308\" height=\"277\" fill=\"#dc8add\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#c061cb\" /></svg>",
+                "x": -640,
+                "y": -233,
+                "z": 0
             }
         ],
         "links": [
@@ -533,38 +569,6 @@
                         },
                         "node_id": "b0f8303c-ab63-4a2b-962e-71aadbc2b413",
                         "port_number": 0
-                    }
-                ],
-                "suspend": false
-            },
-            {
-                "filters": {},
-                "link_id": "01116d15-8d4e-4f0b-9032-ddd1863f9e7f",
-                "link_style": {},
-                "nodes": [
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e0/1",
-                            "x": 31,
-                            "y": 61
-                        },
-                        "node_id": "0a8e2114-f63b-41f8-9da2-8a41c06dfead",
-                        "port_number": 1
-                    },
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e2",
-                            "x": 36,
-                            "y": -23
-                        },
-                        "node_id": "4d314d17-7491-419d-a9fe-75b3bc92e829",
-                        "port_number": 2
                     }
                 ],
                 "suspend": false

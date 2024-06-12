@@ -2,6 +2,8 @@ Nagarajah Nkisan
 
 Wiciak Alexy
 
+1-1A
+
 # SAE Réseau
 
 ## Calcul des sous-réseaux
@@ -10,7 +12,11 @@ L'adresse à notre disposition est 170.50.192.0/24. Nous allons diviser cette ad
 
 De ce fait, on va diviser le réseau en deux sous-réseaux, un pour le bâtiment Production et un qui sera partagé entre les deux autres bâtiments. 
 
+### Batiment Production :
+
 Pour le bâtiment Production, on peut utiliser un masque de sous-réseau de 25 bits, ce qui donne un masque de sous-réseau de 170.50.192.0/25. Cela nous donne 128 adresses, dont 126 utilisables. Ainsi, ce sous-réseau peut accueillir les 110 postes de travail.
+
+### Batiment Finances et R&D :
 
 Pour les deux autres bâtiments, on vas diviser en deux le sous-réseau restant, soit le sous-réseau suivant : 170.50.192.128/25. On peut utiliser un masque de sous-réseau de 26 bits, ce qui donne un masque de sous-réseau de 170.50.192.128/26 pour le batiment Finances et un masque de sous-réseau de 170.50.192.192/26 pour le bâtiment R&D. Cela nous donne 64 adresses, dont 62 utilisables, pour chaque sous-réseau. 
 
@@ -18,17 +24,11 @@ Néanmoins, on a besoin de 3 adresses pour les routeurs. On va donc utiliser un 
 
 Pour les liaisons entre les routeurs, on va donc diviser le sous-réseau restant en trois, soit le sous-réseau suivant : 170.50.192.224/27. Ainsi, les adresses des liaisons entre les routeurs seront les suivantes :
 
-R1-R2 : 170.50.192.224/29
-R1-R3 : 170.50.192.232/29
-R2-R3 : 170.50.192.240/29
+- R1-R2 : 170.50.192.224/29
 
+- R1-R3 : 170.50.192.232/29
 
-
-
-
-
-Les adresses des postes de travail dans tous les bâtiments seront attribuées dynamiquement. Un seul serveur DHCP sera utilisé, avec des relais DHCP dans chaque sous-réseau. De plus, les dix premières adresses de chaque sous-réseau seront réservées pour l’installation de serveurs avec des adresses statiques.
-
+- R2-R3 : 170.50.192.240/29
 
 ## Annexe
 
@@ -228,12 +228,14 @@ interface e0/0
 ip address 10.0.0.1 255.255.255.0
 no shutdown
 end
+wr
 
 configure terminal
 interface e0/1
 ip address 170.50.192.125 255.255.255.128
 no shutdown
 end
+wr
 
 configure terminal
 router rip
@@ -242,6 +244,23 @@ no auto-summary
 network 10.0.0.0
 network 170.50.192.0
 end
+wr
+```
+###### Configuration du Pare-feu
+
+```
+configure terminal
+ip access-list standard monACL
+deny 170.50.192.0 0.0.0.255
+permit any
+end
+wr
+
+configure terminal
+interface e0/1
+ip access-group monACL in
+end
+wr
 ```
 
 ### Configuration des PC
@@ -262,9 +281,14 @@ save
 
 #### Commande de PC3
 
- ```
+```
 ip 170.50.192.193/27 170.50.192.222
 save
 ```
+#### Commande de Internet
 
+```
+ip 10.0.0.2/24 10.0.0.1
+save
+```
 

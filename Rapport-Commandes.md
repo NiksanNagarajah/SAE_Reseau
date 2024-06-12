@@ -6,6 +6,8 @@ Wiciak Alexy
 
 # SAE Réseau
 
+- lien de notre github : https://github.com/Snakin32/SAE_Reseau
+
 ## Calcul des sous-réseaux
 
 L'adresse à notre disposition est 170.50.192.0/24. Nous allons diviser cette adresse en trois sous-réseaux, un pour chaque bâtiment. Si on divise le réseau en trois sous-réseaux de manière égale, on obtient trois réseaux de 64 adresses chacun. Or, le bâtiment Production doit accueillir 110 postes de travail.

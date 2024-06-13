@@ -6,25 +6,31 @@ Wiciak Alexy
 
 # SAE Réseau
 
-- lien de notre github : https://github.com/Snakin32/SAE_Reseau
+*lien de notre github : https://github.com/Snakin32/SAE_Reseau*
 
 ## Calcul des sous-réseaux
 
-L'adresse à notre disposition est 170.50.192.0/24. Nous allons diviser cette adresse en trois sous-réseaux, un pour chaque bâtiment. Si on divise le réseau en trois sous-réseaux de manière égale, on obtient trois réseaux de 64 adresses chacun. Or, le bâtiment Production doit accueillir 110 postes de travail.
+L'adresse à notre disposition est **170.50.192.0/24**. Nous allons diviser cette adresse en **trois sous-réseaux**, un pour chaque bâtiment. Si on divise le réseau en trois sous-réseaux de manière égale, on obtient **trois réseaux de 64 adresses chacun**. Or, le bâtiment Production doit accueillir 110 postes de travail.
 
-De ce fait, on va diviser le réseau en deux sous-réseaux, un pour le bâtiment Production et un qui sera partagé entre les deux autres bâtiments. 
+De ce fait, on va **diviser le réseau en deux sous-réseaux**, un pour le bâtiment Production et un qui sera partagé entre les deux autres bâtiments. 
 
 ### Batiment Production :
 
-Pour le bâtiment Production, on peut utiliser un masque de sous-réseau de 25 bits, ce qui donne un masque de sous-réseau de 170.50.192.0/25. Cela nous donne 128 adresses, dont 126 utilisables. Ainsi, ce sous-réseau peut accueillir les 110 postes de travail.
+Pour le bâtiment Production, on peut utiliser un **masque de sous-réseau de 25 bits**, ce qui donne un masque de sous-réseau de **170.50.192.0/25**. Cela nous donne 128 adresses, dont 126 utilisables. Ainsi, ce sous-réseau peut accueillir les 110 postes de travail.
 
 ### Batiment Finances et R&D :
 
-Pour les deux autres bâtiments, on vas diviser en deux le sous-réseau restant, soit le sous-réseau suivant : 170.50.192.128/25. On peut utiliser un masque de sous-réseau de 26 bits, ce qui donne un masque de sous-réseau de 170.50.192.128/26 pour le batiment Finances et un masque de sous-réseau de 170.50.192.192/26 pour le bâtiment R&D. Cela nous donne 64 adresses, dont 62 utilisables, pour chaque sous-réseau. 
+Pour les deux autres bâtiments, on vas diviser en deux le sous-réseau restant, soit le sous-réseau suivant : 
+- 170.50.192.128/25. 
 
-Néanmoins, on a besoin de 3 adresses pour les routeurs. On va donc utiliser un masque de sous-réseau de 27 bits, ce qui donne un masque de sous-réseau de 170.50.192.192/27 pour le bâtiment R&D. 
+On peut utiliser un masque de sous-réseau de 26 bits, ce qui donne un masque de sous-réseau de **170.50.192.128/26** pour le batiment Finances et un masque de sous-réseau de **170.50.192.192/26** pour le bâtiment R&D. Cela nous donne 64 adresses, dont 62 utilisables, pour chaque sous-réseau. 
 
-Pour les liaisons entre les routeurs, on va donc diviser le sous-réseau restant en trois, soit le sous-réseau suivant : 170.50.192.224/27. Ainsi, les adresses des liaisons entre les routeurs seront les suivantes :
+Néanmoins, nous avons besoin de 3 adresses pour les routeurs. On va donc utiliser un masque de sous-réseau de **27 bits**, ce qui donne un masque de sous-réseau de **170.50.192.192/27** pour le bâtiment R&D. 
+
+Pour les liaisons entre les routeurs, on va donc **diviser le sous-réseau restant en trois**, soit le sous-réseau suivant : 
+- 170.50.192.224/27
+
+Ainsi, les adresses des liaisons entre les routeurs seront les suivantes :
 
 - R1-R2 : 170.50.192.224/29
 
@@ -294,3 +300,10 @@ ip 10.0.0.2/24 10.0.0.1
 save
 ```
 
+## Conclusion
+
+Cette SAE nous a permis de comprendre comment fonctionne un réseau, et comment on le configure. En effet, nous avons appris à diviser un réseau en sous-réseaux, à configurer des routeurs, des serveurs DHCP, des relais DHCP, des pare-feu, et des PC. Nous avons également appris à configurer le routage dynamique, et à créer des ACL.
+
+Nous avons fait un git pour travailler en groupe et pour partager nos fichiers plus facilement. Le travail en groupe nous a permis de mieux comprendre les notions abordées, et de nous entraider en cas de difficulté. 
+
+Enfin, nous avons donc acquis des compétences comme la gestion de projet, la communication, et la résolution de problèmes, mais aussi des compétences techniques liées à la configuration des réseaux vue en séance de tp, qui nous seront utiles dans notre vie professionnelle future. 

@@ -1,0 +1,38 @@
+Jun 13 15:54:21.506 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Jun 13 15:54:21.506 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58915.
+Jun 13 15:54:21.516 HYPERVISOR: exec_cmd: hypervisor version 
+Jun 13 15:54:21.516 HYPERVISOR: exec_cmd: hypervisor working_dir /home/nniksan/Téléchargements/SAE_Reseau/project-files/dynamips 
+Jun 13 15:54:21.516 GENERAL: working_dir=/home/nniksan/Téléchargements/SAE_Reseau/project-files/dynamips
+Jun 13 15:54:21.517 HYPERVISOR: exec_cmd: hypervisor working_dir /home/nniksan/Téléchargements/SAE_Reseau/project-files/dynamips/98000bb9-c6ae-475c-835b-73ec8967266f 
+Jun 13 15:54:21.517 GENERAL: working_dir=/home/nniksan/Téléchargements/SAE_Reseau/project-files/dynamips/98000bb9-c6ae-475c-835b-73ec8967266f
+Jun 13 15:54:21.518 HYPERVISOR: exec_cmd: vm create R2 2 c3600 
+Jun 13 15:54:21.518 VM: VM R2 created.
+Jun 13 15:54:21.519 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5022 
+Jun 13 15:54:21.519 HYPERVISOR: exec_cmd: c3600 get_mac_addr R2 
+Jun 13 15:54:21.519 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:54:21.520 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60693818 
+Jun 13 15:54:21.520 HYPERVISOR: exec_cmd: vm set_ios R2 /home/nniksan/GNS3/images/IOS/c3640-ik9o3s-mz.124-25c.image 
+Jun 13 15:54:21.521 HYPERVISOR: exec_cmd: c3600 set_mac_addr R2 cc02.c506.0000 
+Jun 13 15:54:21.522 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Jun 13 15:54:21.522 HYPERVISOR: exec_cmd: vm set_ram R2 192 
+Jun 13 15:54:21.523 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:54:21.523 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 NM-4E 
+Jun 13 15:54:21.962 HYPERVISOR: exec_cmd: nio create_udp udp-85c4c982-a158-4cc4-9ca6-8acba16cfdf6 10010 127.0.0.1 10011 
+Jun 13 15:54:22.174 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-85c4c982-a158-4cc4-9ca6-8acba16cfdf6 
+Jun 13 15:54:22.174 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:54:22.271 HYPERVISOR: exec_cmd: nio create_udp udp-07c42671-5443-4598-8dc5-5d5b014dd462 10016 127.0.0.1 10017 
+Jun 13 15:54:22.273 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-07c42671-5443-4598-8dc5-5d5b014dd462 
+Jun 13 15:54:22.274 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:54:22.371 HYPERVISOR: exec_cmd: nio create_udp udp-6fb239ba-16f3-4041-b760-bc8b38e17133 10022 127.0.0.1 10023 
+Jun 13 15:54:22.373 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 2 udp-6fb239ba-16f3-4041-b760-bc8b38e17133 
+Jun 13 15:54:22.373 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:54:33.863 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Jun 13 15:54:33.864 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/nniksan/Téléchargements/SAE_Reseau/project-files/dynamips/c3640-ik9o3s-mz.124-25c.image-192.ghost 
+Jun 13 15:54:33.864 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:54:33.865 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Jun 13 15:54:33.865 HYPERVISOR: exec_cmd: vm start R2 
+Jun 13 15:55:04.071 HYPERVISOR: exec_cmd: vm extract_config R2 
+Jun 13 15:57:46.501 HYPERVISOR: exec_cmd: vm get_status R2 
+Jun 13 15:57:46.502 HYPERVISOR: exec_cmd: vm stop R2 
+Jun 13 15:57:46.609 VM: VM R2 shutdown.
+Jun 13 15:57:46.610 HYPERVISOR: exec_cmd: vm extract_config R2 

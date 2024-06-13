@@ -254,6 +254,7 @@ network 170.50.192.0
 end
 wr
 ```
+
 ###### Configuration du Pare-feu
 
 ```
@@ -302,8 +303,8 @@ save
 
 ## Conclusion
 
-Cette SAE nous a permis de comprendre comment fonctionne un réseau, et comment on le configure. En effet, nous avons appris à diviser un réseau en sous-réseaux, à configurer des routeurs, des serveurs DHCP, des relais DHCP, des pare-feu, et des PC. Nous avons également appris à configurer le routage dynamique, et à créer des ACL.
+Cette SAE nous a permis de comprendre comment **fonctionne un réseau**, et comment on le **configure**. En effet, nous avons appris à **diviser un réseau en sous-réseaux**, à **configurer des routeurs**, des **serveurs DHCP**, des **relais DHCP**, des **pare-feu**, et des **PC**. Nous avons également appris à configurer le **routage dynamique**, et à **créer des ACL**.
 
-Nous avons fait un git pour travailler en groupe et pour partager nos fichiers plus facilement. Le travail en groupe nous a permis de mieux comprendre les notions abordées, et de nous entraider en cas de difficulté. 
+Nous avons fait un git pour travailler **en groupe** et pour **partager nos fichiers** plus facilement. Le travail en groupe nous a permis de **mieux comprendre les notions abordées**, et de nous **entraider** en cas de difficulté. 
 
-Enfin, nous avons donc acquis des compétences comme la gestion de projet, la communication, et la résolution de problèmes, mais aussi des compétences techniques liées à la configuration des réseaux vue en séance de tp, qui nous seront utiles dans notre vie professionnelle future. 
+Enfin, nous avons donc acquis des compétences comme la **gestion de projet**, la **communication**, et la **résolution de problèmes**, mais aussi des **compétences techniques** liées à la configuration des réseaux vue en séance de tp, qui nous seront utiles dans notre vie professionnelle future. 

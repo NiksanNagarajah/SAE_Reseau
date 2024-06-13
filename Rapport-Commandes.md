@@ -84,7 +84,7 @@ service dhcp
 ip dhcp pool finances
 network 170.50.192.128 255.255.255.192
 lease 1
-default-router 170.50.192.229
+default-router 170.50.192.190
 end
 wr
 
@@ -98,7 +98,7 @@ service dhcp
 ip dhcp pool r&d
 network 170.50.192.192 255.255.255.224
 lease 1
-default-router 170.50.192.237
+default-router 170.50.192.222
 end
 wr
 

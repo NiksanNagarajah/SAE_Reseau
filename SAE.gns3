@@ -572,6 +572,38 @@
                     }
                 ],
                 "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "e1158027-3a57-4c92-95f5-bb7abe909425",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0/1",
+                            "x": 32,
+                            "y": 61
+                        },
+                        "node_id": "0a8e2114-f63b-41f8-9da2-8a41c06dfead",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e2",
+                            "x": 35,
+                            "y": -23
+                        },
+                        "node_id": "4d314d17-7491-419d-a9fe-75b3bc92e829",
+                        "port_number": 2
+                    }
+                ],
+                "suspend": false
             }
         ],
         "nodes": [
@@ -1160,5 +1192,5 @@
     "type": "topology",
     "variables": null,
     "version": "2.2.47",
-    "zoom": 59
+    "zoom": 99
 }
